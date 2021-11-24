@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class Userseeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -21,4 +21,5 @@ class Userseeder extends Seeder
         $user->username = "admin";
         $user->save();
     }
+
 }
