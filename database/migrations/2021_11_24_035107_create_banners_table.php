@@ -17,9 +17,8 @@ class CreateBannersTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->string('name');
-            $table->varchar('url');
-            $table->datetime('created');
-            $table->timestamps('updated_at');
+            $table->string('url');
+            $table->timestamps();
         });
     }
 

@@ -17,8 +17,7 @@ class CreateTagPostsTable extends Migration
             $table->id();
             $table->integer('tag_id');
             $table->integer('post_id');
-            $table->datetime('created');
-            $table->timestamps('updated_at');
+            $table->timestamps();
         });
     }
 
