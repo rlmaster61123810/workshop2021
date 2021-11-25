@@ -16,10 +16,10 @@ class PostSeeder extends Seeder
         $post = new \App\Models\Post();
         $post->user_id = 1;
         $post->category_id = 1;
-        $post->thumbnail = "https://pbs.twimg.com/media/EjdXZ4nXgAEYdit.jpg";
-        $post->title = "ข่าวท่านศาสดา";
-        $post->description = "ชมรมคนชอบหมี";
-        $post->detail = "วันพระวันเจ้าไม่เวันกันเลย";
+        $post->thumbnail = "https://i.ytimg.com/vi/_uzG-bDL8JM/maxresdefault.jpg";
+        $post->title = "ข่าวลุงเสื้อม่วง";
+        $post->description = "คนนะพยายามหา";
+        $post->detail = "หาสีขาวๆมาใช้หน่อยได้ไหม";
         $post->save();
     }
 }

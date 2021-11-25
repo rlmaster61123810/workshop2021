@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -25,10 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
+        $lastestpost = Post::orderBy('created_at', 'desc')->take(5)->get();
+        $posts = Post::all();
+        $banners = Banner::all();
 
         $data = [
-            'post' => $post,
+            'posts' => $posts,
+            'banners' => $banners,
+            'lastestpost' => $lastestpost,
         ];
 
         // dd($data);
