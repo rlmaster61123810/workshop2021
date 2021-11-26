@@ -74,7 +74,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                     document.getElementById('logout-form').submit();">
+                                                                                                             document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -98,19 +98,7 @@
 </body>
 
 <footer class="bg-light text-lg-start">
-    <div class="py-4 text-center">
-        <a role="button" class="btn btn-primary btn-lg m-2"
-            href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
-            Learn Bootstrap 5
-        </a>
-        <a role="button" class="btn btn-primary btn-lg m-2" href="https://mdbootstrap.com/docs/standard/"
-            target="_blank">
-            Download MDB UI KIT
-        </a>
-    </div>
-
     <hr class="m-0" />
-
     <div class="text-center py-7 align-items-center">
         <p>Follow MDB on social media</p>
         <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" class="btn btn-primary m-1" role="button"
@@ -130,7 +118,5 @@
     </div>
     @yield('footer')
 </footer>
-
-
 
 </html>

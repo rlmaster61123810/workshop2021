@@ -22,11 +22,11 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Auth::routes();
-
 Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit');
+
+Route::get('/delete', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');
+

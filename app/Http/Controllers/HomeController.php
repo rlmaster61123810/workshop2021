@@ -48,4 +48,15 @@ class HomeController extends Controller
         ];
         return view('create', $data);
     }
+    public function edit($post_id)
+    {
+        $categories = Category::all();
+        $posts = Post::find($post_id);
+
+        $data = [
+            'categories' => $categories,
+            'posts' => $posts,
+        ];
+        return view('edit', $data);
+    }
 }

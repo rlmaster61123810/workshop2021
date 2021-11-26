@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $data = new \App\Models\Category();
-        $data->name = 'Administrator';
+        $data->name = 'ข่าวเศรษฐกิจโลก';
         $data->save();
 
     }

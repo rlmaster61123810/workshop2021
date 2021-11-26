@@ -1,8 +1,9 @@
-@extends('layouts.app')
+extends('layouts.app')
+extends 'container'
 @section('content')
-
+@section('create')
     <hr>
-    <div class="container">
+    <div class="container-lg">
         <div class="panel-heading">
             <h4 class="panel-title">
                 เพิ่มรายการ
@@ -34,6 +35,6 @@
                 <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i> บันทึก</button>
             </form>
         </div>
-        @yield('container')
     </div>
+
 @endsection
