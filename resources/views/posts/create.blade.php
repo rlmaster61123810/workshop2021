@@ -1,9 +1,7 @@
-extends('layouts.app')
-extends 'container'
+@extends('layouts.app')
 @section('content')
-@section('create')
     <hr>
-    <div class="container-lg">
+    <div class="container">
         <div class="panel-heading">
             <h4 class="panel-title">
                 เพิ่มรายการ
@@ -36,5 +34,4 @@ extends 'container'
             </form>
         </div>
     </div>
-
 @endsection

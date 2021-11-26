@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
     <hr>
     <div class="container">
         <div class="panel-heading">
@@ -34,6 +33,5 @@
                 <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i> บันทึก</button>
             </form>
         </div>
-        @yield('container')
     </div>
 @endsection

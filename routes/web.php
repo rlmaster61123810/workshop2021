@@ -22,11 +22,14 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
+Route::get('/create', [App\Http\Controllers\PostController::class, 'create'])->name('create');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit');
+Route::get('/edit', [App\Http\Controllers\PostController::class, 'edit'])->name('edit');
 
 Route::get('/delete', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');
+
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+
 
