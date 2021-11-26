@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function store(){
+        $post = new Post(); //INSERT
+        $post->name = request()->name;
+        $post->user_id = auth()->user()->id;
+        $post->category_id = request()->category_id;
+        $post->save();
+        return redirect('/');
+    }
+
     public function create()
     {
         $categories = Category::all();

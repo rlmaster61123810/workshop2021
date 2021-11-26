@@ -11,12 +11,10 @@
             <form action="/store" method="post" role="form">
                 @csrf
                 <div class="form-group">
-                    <form>
-                        <div class="form-group">
-                            <label for="inputName">เลือกรูปภาพ :: </label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                    </form>
+                    <div class="form-group">
+                        <label for="inputName">เลือกรูปภาพ :: </label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="inputName">กรอกชื่อหัวข้อ :: </label>
