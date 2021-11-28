@@ -15,18 +15,24 @@
                         <label for="inputName">เลือกรูปภาพ :: </label>
                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
                     </div>
+                    <label for="selectCategory">เลือกหมวดหมู่ :: </label>
+                    <select name="category_id" id="" class="form-control">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="inputName">กรอกชื่อหัวข้อ :: </label>
-                    <input type="text" name="name" placeholder="ชื่อรายการ" class="form-control">
+                    <label for="inputTitle">กรอกชื่อหัวข้อ :: </label>
+                    <input type="text" name="title" placeholder="ชื่อรายการ" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="inputName">กรอกคำอธิบาย :: </label>
-                    <input type="text" name="name" placeholder="ชื่อรายการ" class="form-control">
+                    <label for="inputDescription">กรอกคำอธิบาย :: </label>
+                    <input type="text" name="description" placeholder="ชื่อรายการ" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="inputName">กรอกคำอธิบาย :: </label>
-                    <input type="text" name="name" placeholder="ชื่อรายการ" class="form-control">
+                    <label for="inputDetail">กรอกรายละเอียด :: </label>
+                    <input type="text" name="detail" placeholder="ชื่อรายการ" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i> บันทึก</button>
             </form>

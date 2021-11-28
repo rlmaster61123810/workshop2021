@@ -8,12 +8,19 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function store(){
-        $post = new Post(); //INSERT
-        $post->name = request()->name;
+    public function store()
+    {
+        $post = new Post();
         $post->user_id = auth()->user()->id;
         $post->category_id = request()->category_id;
+        $post->thumbnail = "https://i.ytimg.com/vi/_uzG-bDL8JM/maxresdefault.jpg";
+        $post->title = request()->title;
+        $post->description = request()->description;
+        $post->detail = request()->detail;
+
         $post->save();
+
+
         return redirect('/');
     }
 
@@ -35,5 +42,11 @@ class PostController extends Controller
             'posts' => $posts,
         ];
         return view('edit', $data);
+    }
+    public function delete($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+        return redirect('/');
     }
 }
