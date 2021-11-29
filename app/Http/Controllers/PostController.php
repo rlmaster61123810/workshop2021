@@ -36,13 +36,24 @@ class PostController extends Controller
     {
         $categories = Category::all();
         $posts = Post::find($post_id);
-
         $data = [
             'categories' => $categories,
             'posts' => $posts,
         ];
         return view('edit', $data);
     }
+    public function update($post_id)
+    {
+        $post = Post::find($post_id);
+        $post->category_id = request()->category_id;
+        $post->thumbnail = "https://i.ytimg.com/vi/_uzG-bDL8JM/maxresdefault.jpg";
+        $post->title = request()->title;
+        $post->description = request()->description;
+        $post->detail = request()->detail;
+        $post->save();
+        return redirect('/');
+    }
+
     public function delete($id)
     {
         $post = Post::find($id);

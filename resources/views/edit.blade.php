@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layouts.app')
 @section('content')
     <hr>
     <div class="panel panel-default">
@@ -10,20 +10,32 @@
         <div class="panel-body">
             <form action="/update" method="post" role="form">
                 @csrf
-                <input type="hidden" name="id" value="{{ $product->id }}">
                 <div class="form-group">
-                    <label for="inputName">กรอกชื่อรายการ :: </label>
-                    <input type="text" name="name" value="{{ $product->name }}" placeholder="ชื่อรายการ"
-                        class="form-control">
-                </div>
-                <div class="form-group">
+                    <div class="form-group">
+                        <label for="inputName">เลือกรูปภาพ :: </label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
                     <label for="selectCategory">เลือกหมวดหมู่ :: </label>
                     <select name="category_id" id="" class="form-control">
                         @foreach ($categories as $category)
-                            <option @if ($product->category_id == $category->id) selected @endif value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="inputTitle">กรอกชื่อหัวข้อ :: </label>
+                    <input type="text" name="name" value="{{$posts->name}}" placeholder="ชื่อหัวข้อ" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="inputDescription">กรอกคำอธิบาย :: </label>
+                    <input type="text" name="name" value="{{$posts->name}}" placeholder="คำอธิบาย" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="inputDetail">กรอกรายละเอียด :: </label>
+                    <input type="text" name="name" value="{{$posts->name}}" placeholder="รายละอียด" class="form-control">
+                </div>
+                {{-- send hidden user id to update --}}
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                 <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i> บันทึก</button>
             </form>
         </div>

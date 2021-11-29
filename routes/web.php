@@ -28,7 +28,10 @@ Route::get('/create', [App\Http\Controllers\PostController::class, 'create'])->n
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/edit', [App\Http\Controllers\PostController::class, 'edit'])->name('edit');
+Route::get('/edit/{id}', [App\Http\Controllers\PostController::class, 'edit'])->name('edit');
+Route::post('/update', [App\Http\Controllers\PostController::class, 'update'])->name('update');
+Route::get('/delete/{id}', [App\Http\Controllers\PostController::class, 'delete'])->name('delete');
+
 
 Route::get('/delete', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');
 
